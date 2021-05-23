@@ -28,7 +28,7 @@ export class GamesRepository implements IGamesRepository {
     return await this.repository
       .createQueryBuilder('games')
       .relation(Game, 'users')
-      .of(id)
+      .of(id) 
       .loadMany();
     // Complete usando query builder
   }
